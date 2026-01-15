@@ -1,4 +1,4 @@
-import "./MovieDetail.css";
+import "@/pages/MovieDetail.css";
 
 const IMG_BASE = "https://image.tmdb.org/t/p/original";
 

@@ -17,7 +17,7 @@
   gap: 22px;
   align-items: flex-start;
 
-  /* 배경 위에 읽기 쉽게 */
+/* 배경 블러 효과 */
   background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(6px);
 }

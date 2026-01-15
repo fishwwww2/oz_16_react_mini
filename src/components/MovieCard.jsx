@@ -1,17 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 function MovieCard({ movie }) {
-  const hasPoster = Boolean(movie.poster_path);
-  const posterUrl = hasPoster
-    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-    : "";
+  const navigate = useNavigate();
+  const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
   return (
-    <article className="card">
+    <article className="card" onClick={() => navigate("/details")}>
       <div className="poster">
-        {hasPoster ? (
-          <img className="posterImg" src={posterUrl} alt={movie.title} />
-        ) : (
-          <div className="posterFallback">포스터</div>
-        )}
+        <img className="posterImg" src={posterUrl} alt={movie.title} />
       </div>
 
       <div className="meta">
